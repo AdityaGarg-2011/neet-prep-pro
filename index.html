@@ -1,476 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEET PAGE PRO | NEET Preparation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <title>NEET PAGE PRO | NEET Preparation</title>
 
-html {
-    scroll-behavior: smooth;
-}
+    <meta name="description"
+          content="NEET PAGE PRO - Physics, Chemistry and Biology preparation for Class 11 and Class 12.">
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #07111f;
-    color: #f5f7fb;
-}
-
-header {
-    background: #08111f;
-    border-bottom: 1px solid #26384d;
-}
-
-.navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #4da3ff;
-}
-
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: #4da3ff;
-}
-
-.hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    background:
-        radial-gradient(circle at 80% 45%, #123d69 0%, transparent 35%),
-        #07111f;
-}
-
-.hero-container {
-    width: 1100px;
-    max-width: 92%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.badge {
-    display: inline-block;
-    border: 1px solid #378cff;
-    color: #66adff;
-    padding: 9px 18px;
-    border-radius: 30px;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
-    font-size: 70px;
-    line-height: 1;
-    margin-bottom: 25px;
-}
-
-.hero h1 span {
-    color: #4da3ff;
-}
-
-.hero p {
-    color: #aab9ca;
-    font-size: 20px;
-    max-width: 700px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 25px;
-    border-radius: 10px;
-    background: #1677ff;
-    color: white;
-    text-decoration: none;
-    border: 1px solid #1677ff;
-}
-
-.btn:hover {
-    background: #075ed5;
-}
-
-.logo-circle {
-    width: 350px;
-    height: 350px;
-    margin: auto;
-    border-radius: 50%;
-    padding: 40px;
-    background: linear-gradient(135deg, #187cff, #6736ff);
-}
-
-.logo-circle-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #07111f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-size: 28px;
-}
-
-.logo-circle-inner span {
-    color: #4da3ff;
-    margin-top: 8px;
-}
-
-section {
-    padding: 80px 20px;
-}
-
-.container {
-    max-width: 1150px;
-    margin: auto;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 44px;
-    margin-bottom: 12px;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #91a1b4;
-    font-size: 18px;
-    margin-bottom: 50px;
-}
-
-.subject-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.subject-card {
-    background: #0e1c2d;
-    border: 1px solid #29405a;
-    border-radius: 20px;
-    padding: 40px;
-}
-
-.subject-card:hover {
-    border-color: #3e91ff;
-}
-
-.subject-icon {
-    font-size: 55px;
-    margin-bottom: 20px;
-}
-
-.subject-card h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-.subject-card p {
-    color: #9eafc2;
-    min-height: 75px;
-    margin-bottom: 20px;
-}
-
-.resources {
-    background: #081422;
-}
-
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.resource-card {
-    background: #0e1d2e;
-    border: 1px solid #293e55;
-    border-radius: 15px;
-    padding: 28px;
-    text-align: center;
-}
-
-.resource-card h3 {
-    margin: 10px 0;
-}
-
-.resource-card p {
-    color: #96a8bc;
-}
-
-.about-box {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-    background: #0e1c2d;
-    border: 1px solid #293e55;
-    border-radius: 20px;
-    padding: 45px;
-}
-
-.about-box p {
-    color: #a7b5c6;
-    font-size: 18px;
-    margin: 15px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #050d18;
-    color: #8293a7;
-}
-
-footer strong {
-    color: #4da3ff;
-}
-
-@media (max-width: 850px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        padding: 70px 0;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-    }
-
-    .subject-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .resource-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .logo-circle {
-        width: 280px;
-        height: 280px;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .resource-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="navbar">
+<!-- =====================================================
+     3D BACKGROUND
+===================================================== -->
 
-        <div class="logo">
-            <span>NEET</span> PAGE PRO
-        </div>
+<div class="space-background">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#subjects">Subjects</a>
-            <a href="#resources">Resources</a>
-            <a href="#about">About</a>
-        </nav>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
 
-    </div>
-</header>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+    <div class="particle particle-7"></div>
+    <div class="particle particle-8"></div>
+    <div class="particle particle-9"></div>
+    <div class="particle particle-10"></div>
 
-<section class="hero">
+    <div class="grid-floor"></div>
 
-    <div class="hero-container">
+</div>
 
-        <div>
 
-            <div class="badge">
-                🚀 NEET PREPARATION PLATFORM
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-left">
+
+        <a href="index.html" class="brand">
+
+            <div class="brand-logo-wrap">
+                <img src="logo.png"
+                     alt="NEET PAGE PRO Logo"
+                     class="brand-logo">
             </div>
 
-            <h1>
-                NEET<br>
-                <span>PAGE PRO</span>
-            </h1>
+            <div class="brand-text">
+                <span class="brand-main">NEET PAGE</span>
+                <span class="brand-pro">PRO</span>
+            </div>
 
-            <p>
-                Prepare smarter with NCERT-focused resources,
-                important topics and chapter-wise NEET preparation.
-            </p>
+        </a>
 
-            <a class="btn" href="#subjects">
-                Start Preparing
+    </div>
+
+
+    <nav class="main-nav">
+
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#features">Features</a>
+
+    </nav>
+
+
+    <a href="#subjects" class="header-btn">
+        Start Preparation
+        <span>→</span>
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-logo-container">
+
+            <div class="logo-ring ring-one"></div>
+            <div class="logo-ring ring-two"></div>
+
+            <div class="hero-logo-glow"></div>
+
+            <img src="logo.png"
+                 alt="NEET PAGE PRO"
+                 class="hero-logo">
+
+        </div>
+
+
+        <div class="hero-badge">
+            <span class="status-dot"></span>
+            NEET PREPARATION COMMAND CENTER
+        </div>
+
+
+        <h1>
+            Your Journey To
+            <span>NEET</span>
+            Starts Here.
+        </h1>
+
+
+        <p class="hero-description">
+            A modern preparation platform for
+            <strong>Physics</strong>,
+            <strong>Chemistry</strong> and
+            <strong>Biology</strong>.
+            Explore Class 11 &amp; 12 chapters, NCERT-based preparation,
+            important topics, formulas, PYQs and practice MCQs.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#subjects" class="primary-btn">
+                <span>Explore Subjects</span>
+                <span class="btn-arrow">→</span>
+            </a>
+
+            <a href="#features" class="secondary-btn">
+                View Features
             </a>
 
         </div>
 
-        <div class="logo-circle">
 
-            <div class="logo-circle-inner">
-                NEET
-                <span>PAGE PRO</span>
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+                <strong>11 + 12</strong>
+                <span>Classes</span>
             </div>
 
+            <div class="stat-line"></div>
+
+            <div class="hero-stat">
+                <strong>PCB</strong>
+                <span>Subjects</span>
+            </div>
+
+            <div class="stat-line"></div>
+
+            <div class="hero-stat">
+                <strong>MCQ</strong>
+                <span>Practice</span>
+            </div>
+
+            <div class="stat-line"></div>
+
+            <div class="hero-stat">
+                <strong>PYQ</strong>
+                <span>Revision</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Floating 3D cards -->
+
+    <div class="floating-card floating-card-one">
+
+        <div class="floating-icon">⚡</div>
+
+        <div>
+            <strong>Physics</strong>
+            <small>Concepts + Formula</small>
+        </div>
+
+    </div>
+
+
+    <div class="floating-card floating-card-two">
+
+        <div class="floating-icon">⚗</div>
+
+        <div>
+            <strong>Chemistry</strong>
+            <small>Reactions + Concepts</small>
+        </div>
+
+    </div>
+
+
+    <div class="floating-card floating-card-three">
+
+        <div class="floating-icon">🧬</div>
+
+        <div>
+            <strong>Biology</strong>
+            <small>NCERT + Revision</small>
         </div>
 
     </div>
 
 </section>
 
-<section id="subjects">
 
-    <div class="container">
+<!-- =====================================================
+     SUBJECT SECTION
+===================================================== -->
 
-        <h2 class="section-title">
-            Choose Your Subject
+<section id="subjects" class="subjects-section">
+
+    <div class="section-heading">
+
+        <div class="section-mini-title">
+            <span></span>
+            CHOOSE YOUR SUBJECT
+            <span></span>
+        </div>
+
+        <h2>
+            Enter Your
+            <span>Preparation Zone</span>
         </h2>
 
-        <p class="section-subtitle">
-            Choose a subject to see Class 11 and Class 12 chapters.
+        <p>
+            Select a subject to access Class 11 and Class 12 chapters.
         </p>
 
-        <div class="subject-grid">
+    </div>
 
-            <div class="subject-card">
+
+    <div class="subject-grid">
+
+
+        <!-- ================= PHYSICS ================= -->
+
+        <a href="physics.html"
+           class="subject-card physics-card">
+
+            <div class="card-glow"></div>
+
+            <div class="card-top">
+
+                <span class="subject-number">01</span>
+
+                <span class="subject-label">
+                    SCIENCE
+                </span>
+
+            </div>
+
+
+            <div class="subject-visual physics-visual">
+
+                <div class="orbit orbit-a"></div>
+                <div class="orbit orbit-b"></div>
+                <div class="orbit orbit-c"></div>
+
+                <div class="physics-core">
+                    ⚡
+                </div>
+
+                <div class="physics-particle pp-1"></div>
+                <div class="physics-particle pp-2"></div>
+                <div class="physics-particle pp-3"></div>
+
+            </div>
+
+
+            <div class="subject-content">
 
                 <div class="subject-icon">⚡</div>
 
                 <h3>Physics</h3>
 
                 <p>
-                    Concepts, formulas and chapter-wise
-                    Physics preparation.
+                    Mechanics, thermodynamics, waves,
+                    electricity, magnetism, optics and modern physics.
                 </p>
 
-                <a class="btn" href="physics.html">
-                    Explore Physics
-                </a>
+
+                <div class="subject-tags">
+
+                    <span>Class 11</span>
+                    <span>Class 12</span>
+                    <span>Formula</span>
+
+                </div>
+
+
+                <div class="explore-row">
+
+                    <span>Explore Physics</span>
+
+                    <span class="explore-arrow">→</span>
+
+                </div>
 
             </div>
 
-            <div class="subject-card">
+        </a>
 
-                <div class="subject-icon">⚗️</div>
+
+        <!-- ================= CHEMISTRY ================= -->
+
+        <a href="chemistry.html"
+           class="subject-card chemistry-card">
+
+            <div class="card-glow"></div>
+
+            <div class="card-top">
+
+                <span class="subject-number">02</span>
+
+                <span class="subject-label">
+                    SCIENCE
+                </span>
+
+            </div>
+
+
+            <div class="subject-visual chemistry-visual">
+
+                <div class="molecule-line ml-1"></div>
+                <div class="molecule-line ml-2"></div>
+                <div class="molecule-line ml-3"></div>
+                <div class="molecule-line ml-4"></div>
+
+                <div class="molecule-node mn-1"></div>
+                <div class="molecule-node mn-2"></div>
+                <div class="molecule-node mn-3"></div>
+                <div class="molecule-node mn-4"></div>
+                <div class="molecule-node mn-5"></div>
+
+                <div class="chem-core">
+                    ⚗
+                </div>
+
+            </div>
+
+
+            <div class="subject-content">
+
+                <div class="subject-icon">⚗</div>
 
                 <h3>Chemistry</h3>
 
                 <p>
-                    Physical, Organic and Inorganic
-                    Chemistry preparation.
+                    Physical, organic and inorganic chemistry
+                    with concepts, reactions, equations and revision.
                 </p>
 
-                <a class="btn" href="chemistry.html">
-                    Explore Chemistry
-                </a>
+
+                <div class="subject-tags">
+
+                    <span>Class 11</span>
+                    <span>Class 12</span>
+                    <span>Reactions</span>
+
+                </div>
+
+
+                <div class="explore-row">
+
+                    <span>Explore Chemistry</span>
+
+                    <span class="explore-arrow">→</span>
+
+                </div>
 
             </div>
 
-            <div class="subject-card">
+        </a>
+
+
+        <!-- ================= BIOLOGY ================= -->
+
+        <a href="biology.html"
+           class="subject-card biology-card">
+
+            <div class="card-glow"></div>
+
+            <div class="card-top">
+
+                <span class="subject-number">03</span>
+
+                <span class="subject-label">
+                    LIFE SCIENCE
+                </span>
+
+            </div>
+
+
+            <div class="subject-visual biology-visual">
+
+                <div class="dna dna-one"></div>
+                <div class="dna dna-two"></div>
+
+                <div class="dna-bar db-1"></div>
+                <div class="dna-bar db-2"></div>
+                <div class="dna-bar db-3"></div>
+                <div class="dna-bar db-4"></div>
+                <div class="dna-bar db-5"></div>
+
+                <div class="bio-glow"></div>
+
+            </div>
+
+
+            <div class="subject-content">
 
                 <div class="subject-icon">🧬</div>
 
                 <h3>Biology</h3>
 
                 <p>
-                    NCERT-focused Biology preparation
-                    for NEET.
+                    Botany, zoology, human physiology,
+                    genetics, ecology and complete NCERT-focused revision.
                 </p>
 
-                <a class="btn" href="biology.html">
-                    Explore Biology
-                </a>
+
+                <div class="subject-tags">
+
+                    <span>Class 11</span>
+                    <span>Class 12</span>
+                    <span>NCERT</span>
+
+                </div>
+
+
+                <div class="explore-row">
+
+                    <span>Explore Biology</span>
+
+                    <span class="explore-arrow">→</span>
+
+                </div>
 
             </div>
 
-        </div>
+        </a>
 
     </div>
 
 </section>
 
-<section class="resources" id="resources">
 
-    <div class="container">
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
-        <h2 class="section-title">
-            NEET Resources
+<section id="features" class="features-section">
+
+    <div class="section-heading">
+
+        <div class="section-mini-title">
+            <span></span>
+            BUILT FOR NEET
+            <span></span>
+        </div>
+
+        <h2>
+            Everything You Need
+            <span>In One Place</span>
         </h2>
 
-        <p class="section-subtitle">
-            Your preparation tools in one place.
+        <p>
+            Your subject pages can grow into complete preparation dashboards.
         </p>
 
-        <div class="resource-grid">
+    </div>
 
-            <div class="resource-card">
-                <div>📖</div>
-                <h3>NCERT</h3>
-                <p>NCERT-focused study material.</p>
-            </div>
 
-            <div class="resource-card">
-                <div>📝</div>
-                <h3>Practice</h3>
-                <p>Chapter-wise practice questions.</p>
-            </div>
+    <div class="feature-grid">
 
-            <div class="resource-card">
-                <div>🎯</div>
-                <h3>Important Topics</h3>
-                <p>Focus on important concepts.</p>
-            </div>
 
-            <div class="resource-card">
-                <div>📊</div>
-                <h3>Progress</h3>
-                <p>Track your preparation.</p>
-            </div>
+        <div class="feature-card">
+
+            <div class="feature-icon">📖</div>
+
+            <h3>NCERT Focus</h3>
+
+            <p>
+                Chapter-wise NCERT-based notes and important concepts.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">⭐</div>
+
+            <h3>Important Topics</h3>
+
+            <p>
+                Quickly identify high-priority topics for revision.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📐</div>
+
+            <h3>Formula Hub</h3>
+
+            <p>
+                Keep important Physics and Chemistry formulas organized.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📝</div>
+
+            <h3>NEET PYQs</h3>
+
+            <p>
+                Organize previous-year question practice by chapter and year.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">🎯</div>
+
+            <h3>Practice MCQs</h3>
+
+            <p>
+                Practice questions with interactive answer checking.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">📊</div>
+
+            <h3>Progress</h3>
+
+            <p>
+                Build chapter-wise revision and preparation tracking.
+            </p>
 
         </div>
 
@@ -478,46 +570,139 @@ footer strong {
 
 </section>
 
-<section id="about">
 
-    <div class="container">
+<!-- =====================================================
+     CALL TO ACTION
+===================================================== -->
 
-        <h2 class="section-title">
-            About NEET PAGE PRO
-        </h2>
+<section class="cta-section">
 
-        <p class="section-subtitle">
-            A student-focused NEET preparation platform.
-        </p>
+    <div class="cta-glow"></div>
 
-        <div class="about-box">
+    <img src="logo.png"
+         alt="NEET PAGE PRO"
+         class="cta-logo">
 
-            <p>
-                NEET PAGE PRO organizes Physics, Chemistry
-                and Biology preparation in one simple platform.
-            </p>
+    <h2>
+        Ready To Start?
+    </h2>
 
-            <p>
-                The website is designed around NCERT-focused
-                learning, chapter-wise preparation and practice.
-            </p>
-
-            <p>
-                <strong>Created by Aditya Garg</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<footer>
     <p>
-        © 2026 <strong>NEET PAGE PRO</strong>
+        Choose your subject and enter your preparation zone.
     </p>
-    <p>Created by Aditya Garg</p>
+
+    <a href="#subjects" class="primary-btn">
+        Start Preparing →
+    </a>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-brand">
+
+        <img src="logo.png"
+             alt="NEET PAGE PRO"
+             class="footer-logo">
+
+        <div>
+            <strong>NEET PAGE PRO</strong>
+            <span>NEET Preparation Platform</span>
+        </div>
+
+    </div>
+
+
+    <div class="footer-center">
+
+        <span>Physics</span>
+        <span>Chemistry</span>
+        <span>Biology</span>
+
+    </div>
+
+
+    <div class="footer-right">
+
+        <span>Made by</span>
+        <strong>Aditya Garg</strong>
+
+    </div>
+
 </footer>
+
+
+<script>
+
+    /* =================================================
+       SMALL 3D MOUSE PARALLAX
+    ================================================= */
+
+    const hero = document.querySelector(".hero");
+
+    document.addEventListener("mousemove", function(e) {
+
+        if (!hero) return;
+
+        const x = (window.innerWidth / 2 - e.clientX) / 70;
+        const y = (window.innerHeight / 2 - e.clientY) / 70;
+
+        hero.style.setProperty("--mouse-x", `${x}px`);
+        hero.style.setProperty("--mouse-y", `${y}px`);
+
+    });
+
+
+    /* =================================================
+       CARD TILT EFFECT
+    ================================================= */
+
+    const cards = document.querySelectorAll(".subject-card");
+
+    cards.forEach(card => {
+
+        card.addEventListener("mousemove", function(e) {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX =
+                ((y - centerY) / centerY) * -4;
+
+            const rotateY =
+                ((x - centerX) / centerX) * 4;
+
+            card.style.transform =
+                `perspective(1200px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)
+                 translateY(-8px)`;
+
+        });
+
+
+        card.addEventListener("mouseleave", function() {
+
+            card.style.transform =
+                "perspective(1200px) rotateX(0deg) rotateY(0deg)";
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
