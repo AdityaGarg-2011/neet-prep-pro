@@ -1,1189 +1,523 @@
-uh<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEET PAGE PRO | NEET Preparation</title>
 
-  <title>NEET PAGE PRO | NEET Preparation</title>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  <meta name="description"
-    content="NEET PAGE PRO - NCERT resources, important topics, chapter-wise practice and PYQs for Physics, Chemistry and Biology.">
+html {
+    scroll-behavior: smooth;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #f5f7fb;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+header {
+    background: #08111f;
+    border-bottom: 1px solid #26384d;
+}
 
-    body {
-      background: #07111f;
-      color: white;
-      line-height: 1.6;
-    }
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 17, 31, 0.95);
-      border-bottom: 1px solid #23344d;
-      padding: 14px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #58a6ff;
-    }
+.logo span {
+    color: #4da3ff;
+}
 
-    .logo span {
-      color: white;
-    }
+nav {
+    display: flex;
+    gap: 25px;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-    nav a:hover {
-      color: #58a6ff;
-    }
+nav a:hover {
+    color: #4da3ff;
+}
 
-    /* HERO */
-    .hero {
-      min-height: 620px;
-      padding: 90px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      background:
-        radial-gradient(circle at 80% 20%, #123c68, transparent 35%),
-        radial-gradient(circle at 20% 80%, #102d4a, transparent 35%);
-    }
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:
+        radial-gradient(circle at 80% 45%, #123d69 0%, transparent 35%),
+        #07111f;
+}
 
-    .hero-text {
-      max-width: 650px;
-    }
+.hero-container {
+    width: 1100px;
+    max-width: 92%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 7px 14px;
-      border: 1px solid #2e8cff;
-      border-radius: 30px;
-      color: #58a6ff;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
+.badge {
+    display: inline-block;
+    border: 1px solid #378cff;
+    color: #66adff;
+    padding: 9px 18px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
 
-    h1 {
-      font-size: clamp(45px, 8vw, 82px);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
+.hero h1 {
+    font-size: 70px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
 
-    h1 span {
-      color: #58a6ff;
-    }
+.hero h1 span {
+    color: #4da3ff;
+}
 
-    .hero p {
-      color: #b7c5d8;
-      font-size: 18px;
-      max-width: 600px;
-    }
+.hero p {
+    color: #aab9ca;
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
 
-    .buttons {
-      margin-top: 30px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 10px;
+    background: #1677ff;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #1677ff;
+}
 
-    .btn {
-      padding: 13px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
+.btn:hover {
+    background: #075ed5;
+}
 
-    .primary {
-      background: #1677ff;
-      color: white;
-    }
+.logo-circle {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 40px;
+    background: linear-gradient(135deg, #187cff, #6736ff);
+}
 
-    .secondary {
-      border: 1px solid #52677f;
-      color: white;
-    }
+.logo-circle-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #07111f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 28px;
+}
 
-    /* LOGO */
-    .logo-box {
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #1677ff, #6b2cff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 70px rgba(36, 123, 255, 0.35);
-      transform: rotate(-4deg);
-    }
+.logo-circle-inner span {
+    color: #4da3ff;
+    margin-top: 8px;
+}
 
-    .logo-inner {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: #07111f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-    }
+section {
+    padding: 80px 20px;
+}
 
-    .logo-inner h2 {
-      font-size: 25px;
-    }
+.container {
+    max-width: 1150px;
+    margin: auto;
+}
 
-    .logo-inner span {
-      color: #58a6ff;
-    }
+.section-title {
+    text-align: center;
+    font-size: 44px;
+    margin-bottom: 12px;
+}
 
-    /* SECTION */
-    section {
-      padding: 75px 7%;
-    }
+.section-subtitle {
+    text-align: center;
+    color: #91a1b4;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 8px;
-    }
+.subject-card {
+    background: #0e1c2d;
+    border: 1px solid #29405a;
+    border-radius: 20px;
+    padding: 40px;
+}
 
-    .section-title p {
-      color: #91a2b8;
-    }
+.subject-card:hover {
+    border-color: #3e91ff;
+}
 
-    /* SEARCH */
-    .search-box {
-      max-width: 700px;
-      margin: 0 auto 45px;
-      display: flex;
-    }
+.subject-icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
 
-    .search-box input {
-      width: 100%;
-      padding: 16px;
-      border: 1px solid #31445e;
-      background: #0d1b2d;
-      color: white;
-      border-radius: 12px;
-      outline: none;
-      font-size: 16px;
-    }
+.subject-card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
 
-    /* CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
+.subject-card p {
+    color: #9eafc2;
+    min-height: 75px;
+    margin-bottom: 20px;
+}
 
-    .card {
-      background: #0d1b2d;
-      border: 1px solid #243952;
-      border-radius: 18px;
-      padding: 28px;
-      transition: 0.3s;
-    }
+.resources {
+    background: #081422;
+}
 
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: #378bff;
-    }
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
 
-    .icon {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
+.resource-card {
+    background: #0e1d2e;
+    border: 1px solid #293e55;
+    border-radius: 15px;
+    padding: 28px;
+    text-align: center;
+}
 
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+.resource-card h3 {
+    margin: 10px 0;
+}
 
-    .card p {
-      color: #9eafc3;
-      margin-bottom: 20px;
-    }
+.resource-card p {
+    color: #96a8bc;
+}
 
-    .card button {
-      border: none;
-      background: #1677ff;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+.about-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: #0e1c2d;
+    border: 1px solid #293e55;
+    border-radius: 20px;
+    padding: 45px;
+}
 
-    /* FEATURES */
-    .features {
-      background: #091625;
-    }
+.about-box p {
+    color: #a7b5c6;
+    font-size: 18px;
+    margin: 15px 0;
+}
 
-    .feature-card {
-      text-align: center;
-    }
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #050d18;
+    color: #8293a7;
+}
 
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      margin-top: 35px;
-    }
+footer strong {
+    color: #4da3ff;
+}
 
-    .stat {
-      text-align: center;
-      padding: 25px;
-      background: #0d1b2d;
-      border-radius: 15px;
-      border: 1px solid #243952;
-    }
+@media (max-width: 850px) {
 
-    .stat h3 {
-      font-size: 30px;
-      color: #58a6ff;
-    }
-
-    .stat p {
-      color: #94a6bb;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 35px 7%;
-      text-align: center;
-      border-top: 1px solid #243952;
-      color: #8799af;
-    }
-
-    footer strong {
-      color: #58a6ff;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      nav {
-        padding: 13px 5%;
-      }
-
-      nav div:last-child {
-        display: none;
-      }
-
-      .hero {
-        text-align: center;
+    .navbar {
         flex-direction: column;
-        padding-top: 65px;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      .logo-box {
-        width: 220px;
-        height: 220px;
-      }
-
-      .logo-inner {
-        width: 175px;
-        height: 175px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
+        gap: 15px;
     }
-  </style>
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logo-circle {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .resource-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">
-      NEET <span>PAGE PRO</span>
-    </div>
+<header>
+    <div class="navbar">
 
-    <div>
-      <a href="#home">Home</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#resources">Resources</a>
-      <a href="#about">About</a>
-    </div>
-  </nav>
+        <div class="logo">
+            <span>NEET</span> PAGE PRO
+        </div>
 
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <div class="hero-text">
-
-      <div class="badge">
-        🚀 NEET PREPARATION PLATFORM
-      </div>
-
-      <h1>
-        NEET<br>
-        <span>PAGE PRO</span>
-      </h1>
-
-      <p>
-        Prepare smarter with NCERT-focused resources,
-        important topics, chapter-wise practice and
-        NEET previous-year questions.
-      </p>
-
-      <div class="buttons">
-        <a href="#subjects" class="btn primary">
-          Start Preparing
-        </a>
-
-        <a href="#resources" class="btn secondary">
-          Explore Resources
-        </a>
-      </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#subjects">Subjects</a>
+            <a href="#resources">Resources</a>
+            <a href="#about">About</a>
+        </nav>
 
     </div>
+</header>
 
+<section class="hero">
 
-    <!-- LOGO -->
-    <div class="logo-box">
+    <div class="hero-container">
 
-      <div class="logo-inner">
+        <div>
 
-        <h2>
-          NEET<br>
-          <span>PAGE PRO</span>
+            <div class="badge">
+                🚀 NEET PREPARATION PLATFORM
+            </div>
+
+            <h1>
+                NEET<br>
+                <span>PAGE PRO</span>
+            </h1>
+
+            <p>
+                Prepare smarter with NCERT-focused resources,
+                important topics and chapter-wise NEET preparation.
+            </p>
+
+            <a class="btn" href="#subjects">
+                Start Preparing
+            </a>
+
+        </div>
+
+        <div class="logo-circle">
+
+            <div class="logo-circle-inner">
+                NEET
+                <span>PAGE PRO</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="subjects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Choose Your Subject
         </h2>
 
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SUBJECTS -->
-  <section id="subjects">
-
-    <div class="section-title">
-
-      <h2>Choose Your Subject</h2>
-
-      <p>
-        Focus on the three core NEET subjects.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">⚡</div>
-
-        <h3>Physics</h3>
-
-        <p>
-          Concepts, formulas, important topics
-          and practice questions.
+        <p class="section-subtitle">
+            Choose a subject to see Class 11 and Class 12 chapters.
         </p>
 
-        <a class="btn" href="#physics">
-    Explore Physics
-        </a>
-        
+        <div class="subject-grid">
 
-      </div>
+            <div class="subject-card">
 
+                <div class="subject-icon">⚡</div>
 
-      <div class="card">
+                <h3>Physics</h3>
 
-        <div class="icon">⚗️</div>
+                <p>
+                    Concepts, formulas and chapter-wise
+                    Physics preparation.
+                </p>
 
-        <h3>Chemistry</h3>
+                <a class="btn" href="physics.html">
+                    Explore Physics
+                </a>
 
-        <p>
-          Physical, Organic and Inorganic
-          Chemistry preparation.
-        </p>
+            </div>
 
-        <a class="btn" href="#chemistry">
-    Explore Chemistry
-        </a>
+            <div class="subject-card">
 
-      </div>
+                <div class="subject-icon">⚗️</div>
 
+                <h3>Chemistry</h3>
 
-      <div class="card">
+                <p>
+                    Physical, Organic and Inorganic
+                    Chemistry preparation.
+                </p>
 
-        <div class="icon">🧬</div>
+                <a class="btn" href="chemistry.html">
+                    Explore Chemistry
+                </a>
 
-        <h3>Biology</h3>
+            </div>
 
-        <p>
-          NCERT-focused Biology preparation
-          for NEET.
-        </p>
+            <div class="subject-card">
 
-        <a class="btn" href="#biology">
-    Explore Biology
-        </a>
+                <div class="subject-icon">🧬</div>
 
-      </div>
+                <h3>Biology</h3>
 
-    </div>
+                <p>
+                    NCERT-focused Biology preparation
+                    for NEET.
+                </p>
 
-  </section>
+                <a class="btn" href="biology.html">
+                    Explore Biology
+                </a>
 
+            </div>
 
-  <!-- RESOURCES -->
-  <section class="features" id="resources">
-
-    <div class="section-title">
-
-      <h2>Study Resources</h2>
-
-      <p>
-        Everything organized in one place.
-      </p>
+        </div>
 
     </div>
 
+</section>
 
-    <div class="cards">
+<section class="resources" id="resources">
 
-      <div class="card feature-card">
+    <div class="container">
 
-        <div class="icon">📖</div>
+        <h2 class="section-title">
+            NEET Resources
+        </h2>
 
-        <h3>NCERT</h3>
-
-        <p>
-          Class 11 and Class 12 NCERT-focused
-          study resources.
+        <p class="section-subtitle">
+            Your preparation tools in one place.
         </p>
 
-        <button onclick="resourceMessage('NCERT')">
-          Open NCERT
-        </button>
+        <div class="resource-grid">
 
-      </div>
+            <div class="resource-card">
+                <div>📖</div>
+                <h3>NCERT</h3>
+                <p>NCERT-focused study material.</p>
+            </div>
 
+            <div class="resource-card">
+                <div>📝</div>
+                <h3>Practice</h3>
+                <p>Chapter-wise practice questions.</p>
+            </div>
 
-      <div class="card feature-card">
+            <div class="resource-card">
+                <div>🎯</div>
+                <h3>Important Topics</h3>
+                <p>Focus on important concepts.</p>
+            </div>
 
-        <div class="icon">⭐</div>
+            <div class="resource-card">
+                <div>📊</div>
+                <h3>Progress</h3>
+                <p>Track your preparation.</p>
+            </div>
 
-        <h3>Important Topics</h3>
-
-        <p>
-          Focus your preparation on important
-          concepts and chapters.
-        </p>
-
-        <button onclick="resourceMessage('Important Topics')">
-          View Topics
-        </button>
-
-      </div>
-
-
-      <div class="card feature-card">
-
-        <div class="icon">📝</div>
-
-        <h3>PYQs</h3>
-
-        <p>
-          Practice previous-year questions
-          subject-wise and chapter-wise.
-        </p>
-
-        <button onclick="resourceMessage('PYQs')">
-          Practice PYQs
-        </button>
-
-      </div>
+        </div>
 
     </div>
 
+</section>
 
-    <!-- STATS -->
-    <div class="stats">
+<section id="about">
 
-      <div class="stat">
-        <h3>3</h3>
-        <p>Core Subjects</p>
-      </div>
+    <div class="container">
 
-      <div class="stat">
-        <h3>11 & 12</h3>
-        <p>Classes</p>
-      </div>
+        <h2 class="section-title">
+            About NEET PAGE PRO
+        </h2>
 
-      <div class="stat">
-        <h3>NCERT</h3>
-        <p>Focused</p>
-      </div>
+        <p class="section-subtitle">
+            A student-focused NEET preparation platform.
+        </p>
 
-      <div class="stat">
-        <h3>PYQ</h3>
-        <p>Practice</p>
-      </div>
+        <div class="about-box">
 
-    </div>
+            <p>
+                NEET PAGE PRO organizes Physics, Chemistry
+                and Biology preparation in one simple platform.
+            </p>
 
-  </section>
+            <p>
+                The website is designed around NCERT-focused
+                learning, chapter-wise preparation and practice.
+            </p>
 
+            <p>
+                <strong>Created by Aditya Garg</strong>
+            </p>
 
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="section-title">
-
-      <h2>About NEET PAGE PRO</h2>
-
-      <p>
-        A student-focused NEET preparation website.
-      </p>
+        </div>
 
     </div>
 
-    <div class="card">
+</section>
 
-      <h3>Study Smarter. Prepare Better.</h3>
-
-      <p>
-        NEET PAGE PRO is designed to make NEET 
-
-    }
-
-  </script>
+<footer>
+    <p>
+        © 2026 <strong>NEET PAGE PRO</strong>
+    </p>
+    <p>Created by Aditya Garg</p>
+</footer>
 
 </body>
-    </html>
-      <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>NEET PAGE PRO | NEET Preparation</title>
-
-  <meta name="description"
-    content="NEET PAGE PRO - NCERT resources, important topics, chapter-wise practice and PYQs for Physics, Chemistry and Biology.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #07111f;
-      color: white;
-      line-height: 1.6;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(7, 17, 31, 0.95);
-      border-bottom: 1px solid #23344d;
-      padding: 14px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: #58a6ff;
-    }
-
-    .logo span {
-      color: white;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #58a6ff;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 620px;
-      padding: 90px 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      background:
-        radial-gradient(circle at 80% 20%, #123c68, transparent 35%),
-        radial-gradient(circle at 20% 80%, #102d4a, transparent 35%);
-    }
-
-    .hero-text {
-      max-width: 650px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 7px 14px;
-      border: 1px solid #2e8cff;
-      border-radius: 30px;
-      color: #58a6ff;
-      margin-bottom: 20px;
-      font-size: 13px;
-    }
-
-    h1 {
-      font-size: clamp(45px, 8vw, 82px);
-      line-height: 1;
-      margin-bottom: 20px;
-    }
-
-    h1 span {
-      color: #58a6ff;
-    }
-
-    .hero p {
-      color: #b7c5d8;
-      font-size: 18px;
-      max-width: 600px;
-    }
-
-    .buttons {
-      margin-top: 30px;
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 13px 22px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    .primary {
-      background: #1677ff;
-      color: white;
-    }
-
-    .secondary {
-      border: 1px solid #52677f;
-      color: white;
-    }
-
-    /* LOGO */
-    .logo-box {
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      background: linear-gradient(145deg, #1677ff, #6b2cff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 70px rgba(36, 123, 255, 0.35);
-      transform: rotate(-4deg);
-    }
-
-    .logo-inner {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: #07111f;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 25px;
-    }
-
-    .logo-inner h2 {
-      font-size: 25px;
-    }
-
-    .logo-inner span {
-      color: #58a6ff;
-    }
-
-    /* SECTION */
-    section {
-      padding: 75px 7%;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: 36px;
-      margin-bottom: 8px;
-    }
-
-    .section-title p {
-      color: #91a2b8;
-    }
-
-    /* SEARCH */
-    .search-box {
-      max-width: 700px;
-      margin: 0 auto 45px;
-      display: flex;
-    }
-
-    .search-box input {
-      width: 100%;
-      padding: 16px;
-      border: 1px solid #31445e;
-      background: #0d1b2d;
-      color: white;
-      border-radius: 12px;
-      outline: none;
-      font-size: 16px;
-    }
-
-    /* CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .card {
-      background: #0d1b2d;
-      border: 1px solid #243952;
-      border-radius: 18px;
-      padding: 28px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: #378bff;
-    }
-
-    .icon {
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .card h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .card p {
-      color: #9eafc3;
-      margin-bottom: 20px;
-    }
-
-    .card button {
-      border: none;
-      background: #1677ff;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    /* FEATURES */
-    .features {
-      background: #091625;
-    }
-
-    .feature-card {
-      text-align: center;
-    }
-
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-      margin-top: 35px;
-    }
-
-    .stat {
-      text-align: center;
-      padding: 25px;
-      background: #0d1b2d;
-      border-radius: 15px;
-      border: 1px solid #243952;
-    }
-
-    .stat h3 {
-      font-size: 30px;
-      color: #58a6ff;
-    }
-
-    .stat p {
-      color: #94a6bb;
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 35px 7%;
-      text-align: center;
-      border-top: 1px solid #243952;
-      color: #8799af;
-    }
-
-    footer strong {
-      color: #58a6ff;
-    }
-
-    /* MOBILE */
-    @media (max-width: 800px) {
-      nav {
-        padding: 13px 5%;
-      }
-
-      nav div:last-child {
-        display: none;
-      }
-
-      .hero {
-        text-align: center;
-        flex-direction: column;
-        padding-top: 65px;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      .logo-box {
-        width: 220px;
-        height: 220px;
-      }
-
-      .logo-inner {
-        width: 175px;
-        height: 175px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="logo">
-      NEET <span>PAGE PRO</span>
-    </div>
-
-    <div>
-      <a href="#home">Home</a>
-      <a href="#subjects">Subjects</a>
-      <a href="#resources">Resources</a>
-      <a href="#about">About</a>
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-
-    <div class="hero-text">
-
-      <div class="badge">
-        🚀 NEET PREPARATION PLATFORM
-      </div>
-
-      <h1>
-        NEET<br>
-        <span>PAGE PRO</span>
-      </h1>
-
-      <p>
-        Prepare smarter with NCERT-focused resources,
-        important topics, chapter-wise practice and
-        NEET previous-year questions.
-      </p>
-
-      <div class="buttons">
-        <a href="#subjects" class="btn primary">
-          Start Preparing
-        </a>
-
-        <a href="#resources" class="btn secondary">
-          Explore Resources
-        </a>
-      </div>
-
-    </div>
-
-
-    <!-- LOGO -->
-    <div class="logo-box">
-
-      <div class="logo-inner">
-
-        <h2>
-          NEET<br>
-          <span>PAGE PRO</span>
-        </h2>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SUBJECTS -->
-  <section id="subjects">
-
-    <div class="section-title">
-
-      <h2>Choose Your Subject</h2>
-
-      <p>
-        Focus on the three core NEET subjects.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card">
-
-        <div class="icon">⚡</div>
-
-        <h3>Physics</h3>
-
-        <p>
-          Concepts, formulas, important topics
-          and practice questions.
-        </p>
-
-        <button onclick="subjectMessage('Physics')">
-          Explore Physics
-        </button>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">⚗️</div>
-
-        <h3>Chemistry</h3>
-
-        <p>
-          Physical, Organic and Inorganic
-          Chemistry preparation.
-        </p>
-
-        <button onclick="subjectMessage('Chemistry')">
-          Explore Chemistry
-        </button>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="icon">🧬</div>
-
-        <h3>Biology</h3>
-
-        <p>
-          NCERT-focused Biology preparation
-          for NEET.
-        </p>
-
-        <button onclick="subjectMessage('Biology')">
-          Explore Biology
-        </button>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- RESOURCES -->
-  <section class="features" id="resources">
-
-    <div class="section-title">
-
-      <h2>Study Resources</h2>
-
-      <p>
-        Everything organized in one place.
-      </p>
-
-    </div>
-
-
-    <div class="cards">
-
-      <div class="card feature-card">
-
-        <div class="icon">📖</div>
-
-        <h3>NCERT</h3>
-
-        <p>
-          Class 11 and Class 12 NCERT-focused
-          study resources.
-        </p>
-
-        <button onclick="resourceMessage('NCERT')">
-          Open NCERT
-        </button>
-
-      </div>
-
-
-      <div class="card feature-card">
-
-        <div class="icon">⭐</div>
-
-        <h3>Important Topics</h3>
-
-        <p>
-          Focus your preparation on important
-          concepts and chapters.
-        </p>
-
-        <button onclick="resourceMessage('Important Topics')">
-          View Topics
-        </button>
-
-      </div>
-
-
-      <div class="card feature-card">
-
-        <div class="icon">📝</div>
-
-        <h3>PYQs</h3>
-
-        <p>
-          Practice previous-year questions
-          subject-wise and chapter-wise.
-        </p>
-
-        <button onclick="resourceMessage('PYQs')">
-          Practice PYQs
-        </button>
-
-      </div>
-
-    </div>
-
-
-    <!-- STATS -->
-    <div class="stats">
-
-      <div class="stat">
-        <h3>3</h3>
-        <p>Core Subjects</p>
-      </div>
-
-      <div class="stat">
-        <h3>11 & 12</h3>
-        <p>Classes</p>
-      </div>
-
-      <div class="stat">
-        <h3>NCERT</h3>
-        <p>Focused</p>
-      </div>
-
-      <div class="stat">
-        <h3>PYQ</h3>
-        <p>Practice</p>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="section-title">
-
-      <h2>About NEET PAGE PRO</h2>
-
-      <p>
-        A student-focused NEET preparation website.
-      </p>
-
-    </div>
-
-    <div class="card">
-
-      <h3>
+</html>
