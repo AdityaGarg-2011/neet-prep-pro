@@ -1,219 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Physics | NEET PAGE PRO</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics - NEET PAGE PRO</title>
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #07111f;
-    color: white;
-}
-
-header {
-    background: #08111f;
-    border-bottom: 1px solid #26384d;
-}
-
-.navbar {
-    max-width: 1100px;
-    margin: auto;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #4da3ff;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-.back {
-    color: #64adff;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 35px;
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.icon {
-    font-size: 65px;
-}
-
-h1 {
-    font-size: 48px;
-    margin: 10px 0;
-}
-
-.hero p {
-    color: #9eafc2;
-}
-
-.class-box {
-    margin-bottom: 45px;
-}
-
-.class-box h2 {
-    color: #5faaff;
-    border-left: 4px solid #267fff;
-    padding-left: 14px;
-    margin-bottom: 20px;
-}
-
-.chapters {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-}
-
-.chapter {
-    background: #101f31;
-    border: 1px solid #263e57;
-    border-radius: 10px;
-    padding: 16px;
-}
-
-.chapter:hover {
-    border-color: #368dff;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #8293a7;
-    border-top: 1px solid #23374d;
-}
-
-@media(max-width:700px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .chapters {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-}
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="navbar">
-        <div class="logo">
-            <span>NEET</span> PAGE PRO
-        </div>
+    <div class="logo">NEET PAGE PRO</div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="physics.html">Physics</a>
-            <a href="chemistry.html">Chemistry</a>
-            <a href="biology.html">Biology</a>
-        </nav>
-    </div>
+    <a href="index.html" class="home-btn">
+        🏠 Home
+    </a>
 </header>
 
-<main class="container">
+<main class="subject-page">
 
-<a class="back" href="index.html">← Back to Home</a>
+    <div class="page-title">
+        <span>NEET PREPARATION</span>
+        <h1>⚡ PHYSICS</h1>
+        <p>Class 11 & Class 12 Physics</p>
+    </div>
 
-<div class="hero">
-    <div class="icon">⚡</div>
-    <h1>Physics</h1>
-    <p>Class 11 + Class 12 Physics</p>
-</div>
+    <!-- CLASS 11 -->
 
-<div class="class-box">
+    <section>
+        <h2 class="class-title">📘 CLASS 11 PHYSICS</h2>
 
-<h2>Class 11 Physics</h2>
+        <div class="chapter-grid">
 
-<div class="chapters">
+            <a href="physics-units.html" class="chapter">
+                01. Units and Measurements
+            </a>
 
-<div class="chapter">01. Units and Measurements</div>
-<div class="chapter">02. Motion in a Straight Line</div>
-<div class="chapter">03. Motion in a Plane</div>
-<div class="chapter">04. Laws of Motion</div>
-<div class="chapter">05. Work, Energy and Power</div>
-<div class="chapter">06. System of Particles and Rotational Motion</div>
-<div class="chapter">07. Gravitation</div>
-<div class="chapter">08. Mechanical Properties of Solids</div>
-<div class="chapter">09. Mechanical Properties of Fluids</div>
-<div class="chapter">10. Thermal Properties of Matter</div>
-<div class="chapter">11. Thermodynamics</div>
-<div class="chapter">12. Kinetic Theory</div>
-<div class="chapter">13. Oscillations</div>
-<div class="chapter">14. Waves</div>
+            <a href="physics-motion-straight.html" class="chapter">
+                02. Motion in a Straight Line
+            </a>
 
-</div>
-</div>
+            <a href="physics-motion-plane.html" class="chapter">
+                03. Motion in a Plane
+            </a>
 
-<div class="class-box">
+            <a href="physics-laws-motion.html" class="chapter">
+                04. Laws of Motion
+            </a>
 
-<h2>Class 12 Physics</h2>
+            <a href="physics-work-energy.html" class="chapter">
+                05. Work, Energy and Power
+            </a>
 
-<div class="chapters">
+            <a href="physics-rotational-motion.html" class="chapter">
+                06. System of Particles and Rotational Motion
+            </a>
 
-<div class="chapter">01. Electric Charges and Fields</div>
-<div class="chapter">02. Electrostatic Potential and Capacitance</div>
-<div class="chapter">03. Current Electricity</div>
-<div class="chapter">04. Moving Charges and Magnetism</div>
-<div class="chapter">05. Magnetism and Matter</div>
-<div class="chapter">06. Electromagnetic Induction</div>
-<div class="chapter">07. Alternating Current</div>
-<div class="chapter">08. Electromagnetic Waves</div>
-<div class="chapter">09. Ray Optics and Optical Instruments</div>
-<div class="chapter">10. Wave Optics</div>
-<div class="chapter">11. Dual Nature of Radiation and Matter</div>
-<div class="chapter">12. Atoms</div>
-<div class="chapter">13. Nuclei</div>
-<div class="chapter">14. Semiconductor Electronics</div>
+            <a href="physics-gravitation.html" class="chapter">
+                07. Gravitation
+            </a>
 
-</div>
-</div>
+            <a href="physics-solids.html" class="chapter">
+                08. Mechanical Properties of Solids
+            </a>
+
+            <a href="physics-fluids.html" class="chapter">
+                09. Mechanical Properties of Fluids
+            </a>
+
+            <a href="physics-thermal.html" class="chapter">
+                10. Thermal Properties of Matter
+            </a>
+
+            <a href="physics-thermodynamics.html" class="chapter">
+                11. Thermodynamics
+            </a>
+
+            <a href="physics-kinetic-theory.html" class="chapter">
+                12. Kinetic Theory
+            </a>
+
+            <a href="physics-oscillations.html" class="chapter">
+                13. Oscillations
+            </a>
+
+            <a href="physics-waves.html" class="chapter">
+                14. Waves
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- CLASS 12 -->
+
+    <section>
+        <h2 class="class-title">📕 CLASS 12 PHYSICS</h2>
+
+        <div class="chapter-grid">
+
+            <a href="physics-electric-charges.html" class="chapter">
+                01. Electric Charges and Fields
+            </a>
+
+            <a href="physics-electrostatic-potential.html" class="chapter">
+                02. Electrostatic Potential and Capacitance
+            </a>
+
+            <a href="physics-current-electricity.html" class="chapter">
+                03. Current Electricity
+            </a>
+
+            <a href="physics-moving-charges.html" class="chapter">
+                04. Moving Charges and Magnetism
+            </a>
+
+            <a href="physics-magnetism-matter.html" class="chapter">
+                05. Magnetism and Matter
+            </a>
+
+            <a href="physics-electromagnetic-induction.html" class="chapter">
+                06. Electromagnetic Induction
+            </a>
+
+            <a href="physics-alternating-current.html" class="chapter">
+                07. Alternating Current
+            </a>
+
+            <a href="physics-electromagnetic-waves.html" class="chapter">
+                08. Electromagnetic Waves
+            </a>
+
+            <a href="physics-ray-optics.html" class="chapter">
+                09. Ray Optics and Optical Instruments
+            </a>
+
+            <a href="physics-wave-optics.html" class="chapter">
+                10. Wave Optics
+            </a>
+
+            <a href="physics-dual-nature.html" class="chapter">
+                11. Dual Nature of Radiation and Matter
+            </a>
+
+            <a href="physics-atoms.html" class="chapter">
+                12. Atoms
+            </a>
+
+            <a href="physics-nuclei.html" class="chapter">
+                13. Nuclei
+            </a>
+
+            <a href="physics-semiconductor.html" class="chapter">
+                14. Semiconductor Electronics
+            </a>
+
+        </div>
+    </section>
 
 </main>
 
 <footer>
-© 2026 NEET PAGE PRO
+    <p>© 2026 NEET PAGE PRO</p>
+    <p>Made by Aditya Garg</p>
 </footer>
 
 </body>
-</html>
+        </html>
